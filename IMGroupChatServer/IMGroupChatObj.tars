@@ -1,0 +1,26 @@
+
+module IMGroupChatApp
+{
+
+struct IMGroupModifyTopReq{
+    1 require int user_id;
+    2 require int group_id;
+    3 require int ontop;
+    4 require  int result; 
+};
+
+
+
+struct IMGroupModifyTopResp{
+    1 require int user_id;
+    2 require int group_id;
+    3 require  int result; 
+};
+
+ 
+interface IMGroupChatObj
+{
+          void setontop(IMGroupModifyTopReq req,out IMGroupModifyTopResp resp);   //置顶
+};
+
+}; 
